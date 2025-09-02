@@ -1,12 +1,12 @@
-import { Metadata } from 'next'
+// import { Metadata } from 'next'
 import ContactForm from '@/components/ContactForm'
 import ContactInfo from '@/components/ContactInfo'
 
-export const metadata: Metadata = {
-  title: 'Contact Us - SS Solar | Get Your Free Solar Consultation',
-  description: 'Contact SS Solar for your free solar consultation. Our experts are ready to help you switch to clean, renewable energy. Call, email, or fill out our contact form today.',
-  keywords: 'contact SS Solar, solar consultation, solar quote, solar installation contact',
-}
+// export const metadata: Metadata = {
+//   title: 'Contact Us - SS Solar | Get Your Free Solar Consultation',
+//   description: 'Contact SS Solar for your free solar consultation. Our experts are ready to help you switch to clean, renewable energy. Call, email, or fill out our contact form today.',
+//   keywords: 'contact SS Solar, solar consultation, solar quote, solar installation contact',
+// }
 
 export default function ContactPage() {
   return (

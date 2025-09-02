@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { prisma } from '@/lib/db'
+// import { prisma } from '@/lib/db'
 
 export async function POST(request: NextRequest) {
   try {
@@ -24,14 +24,14 @@ export async function POST(request: NextRequest) {
     }
 
     // Store contact submission in database
-    const contact = await prisma.contact.create({
-      data: {
-        name,
-        email,
-        phone,
-        message
-      }
-    })
+    // const contact = await prisma.contact.create({
+    //   data: {
+    //     name,
+    //     email,
+    //     phone,
+    //     message
+    //   }
+    // })
 
     // In a real application, you might want to:
     // 1. Send an email notification to the team
@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       { 
         message: 'Contact form submitted successfully',
-        id: contact.id 
+        // id: contact.id 
       },
       { status: 201 }
     )
@@ -60,14 +60,14 @@ export async function GET() {
   try {
     // This endpoint could be used to retrieve contact submissions
     // (with proper authentication in a real application)
-    const contacts = await prisma.contact.findMany({
-      orderBy: {
-        createdAt: 'desc'
-      },
-      take: 10 // Limit to last 10 submissions
-    })
+    // const contacts = await prisma.contact.findMany({
+    //   orderBy: {
+    //     createdAt: 'desc'
+    //   },
+    //   take: 10 // Limit to last 10 submissions
+    // })
 
-    return NextResponse.json(contacts)
+    return NextResponse.json({message : 'GET method is not implemented yet'})
   } catch (error) {
     console.error('Error fetching contacts:', error)
     
